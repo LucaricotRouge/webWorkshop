@@ -1,5 +1,5 @@
 # Workshop Websockey
 
-![photoFigma](.siteInterface/PrototypeFigma.png)
+![photoFigma](./siteInterface/PrototypeFigma.png)
 
 [video yt](https://)
