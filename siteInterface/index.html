@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"> <!-- Conteneur qui contient le header avec les boutons, le main où je vais faire les 
+        animations et le footer avec les inforlations de mes contacts-->
+        <div class="header">
+            <div class="dropdown"> <!--Menu déroulant avec bouton + menu-->
+                <button class="dropbtn" onclick="toggleDropdown('dropdown1')">Experiments <span class="arrow">&#9662;</span></button>
+                <!--Chaque bouton déclenche la fonction toggleDropdown() en passant l'identifiant du menu correspondant 
+                (dropdown1, dropdown2, dropdown3).
+                Les menus sont assignés à un id pour qu'ils puissent être ciblés par la fonction JavaScript-->
+                <div class="dropdown-content" id="dropdown1">
+                    <a href="#">Experiment1</a>
+                    <a href="#">Experiment2</a>
+                    <a href="#">Experiment3</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown('dropdown2')">Projets <span class="arrow">&#9662;</span></button>
+                <div class="dropdown-content" id="dropdown2">
+                    <a href="#">Projet1</a>
+                    <a href="#">Projet2</a>
+                    <a href="#">Projet3</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown('dropdown3')">Research <span class="arrow">&#9662;</span></button>
+                <div class="dropdown-content" id="dropdown3">
+                    <a href="#">Research1</a>
+                    <a href="#">Research2</a>
+                    <a href="#">Research3</a>
+                </div>
+            </div>
+        </div>  
+
+        <div class="main">
+            <div id="status" class= "Status">Status : Pas de connexion </div> <!--indique le status de connexion à l'esp32-->
+            <p class = "Simulation">Votre simulation : </p> <!--simple text-->
+            <input class ="barreRecherche" type = "text" id ="searchbar" placeholder="Rechercher un capteur..." onkeydown="barreDeRecherche(event)"> 
+            <!--donner un id permet de s'assurer que dans la fonction checkEnter() on attribue à la variable input les 
+            valeurs entrées dans cette barre de recherche à travers le document.getElementById() en ciblant cette 
+            barre de recherche en particulier et non une autre-->
+            <!-- placeholder : Affiche un texte par défaut dans un champ avant que l'utilisateur ne commence à écrire. -->
+            <!-- la fonction onkeydown est appelée chaque fois qu'une touche est pressée dans la barre de recherche -->
+            <div class="slider-containerAngle"> <!--Curseur bouton allant de 0 à 180° + affichage -->
+                <input type="range" id="angleSlider" min="0" max="255" value="0" /> <!--curseur bouton-->
+                <div id="angleDisplay">Luminosité: 0%</div> <!--affichage de la valeur de l'angle-->
+            </div>
+        </div>    
+
+        <div class="footer">
+            <div class = "contactInfo">
+                <p class ="contactUs">Contact me :</p>
+                <p>mail : lucas.jourdet@edu.devinci.fr</p>
+            </div>
+        </div>  
+    </div>
+
+    <script src="affichageBouton.js"></script>
+    <script src="barreDeRecherche.js"></script>
+    <script src="affichageAngle.js"></script>
+    <script src="webSocket.js"></script>
+    <script src="transmissionAngle.js"></script>
+
+</body>
+</html>

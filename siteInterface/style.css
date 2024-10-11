@@ -1,0 +1,144 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #a2a2a2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #423f3f;
+    height: 61px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.Status {
+   color : rgb(131, 76, 76); 
+   position: absolute; /* Utiliser position absolute pour le positionner */
+   right: 0; /* Colle à droite */
+   margin-right: 20px; /* Espacement à droite */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown {
+    margin: 0 20px;
+    position: relative;
+}
+
+.dropbtn {
+    font-family: "Jacquarda Bastarda 9";
+    background-color: #423f3f;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 16px;   
+}
+
+.main {
+    background-color: #a2a2a2;
+    margin-top: 61px;
+    padding: 20px;
+    min-height: calc(100vh - 224px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espace les éléments (textes en haut, curseur en bas) */
+}
+
+.main-top {
+    display: flex;
+    justify-content: space-between; /* Aligne "Votre simulation" à gauche et la barre de recherche à droite */
+    align-items: center;
+}
+
+.Simulation {
+    font-family: "Arial", serif;
+    font-size: 24px;
+    color: white;
+}
+
+#searchbar {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.slider-containerAngle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    flex-grow: 1; /* Permet au slider de s'adapter à la taille disponible */
+}
+
+/* Media Query pour les écrans larges */
+@media (min-width: 600px) {
+    
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Aligne les éléments en colonne avec espace entre eux */
+    }
+
+    .main-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .slider-containerAngle {
+        margin-top: 100px; /* Le curseur sera aligné au centre de la page */
+        align-self: center; /* Centre le curseur horizontalement */
+    }
+}
+
+/* Media Query pour les petits écrans */
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-top {
+        flex-direction: column; /* Passe en colonne sur les petits écrans */
+        align-items: flex-start;
+    }
+
+    #searchbar {
+        margin-top: 10px;
+    }
+}
+
+.footer {
+    background-color: #423f3f;
+    height: 123px;
+    display: flex;
+}
+
+.contactInfo {
+    font-family: "Arial", serif;
+    font-size: 12px;
+    margin-left : 10px;
+    color: white;
+}
+
+.contactUs {
+    font-family: "Arial", serif;
+    font-size: 18px;
+    color: rgb(197, 177, 177);
+}
