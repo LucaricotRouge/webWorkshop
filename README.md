@@ -1,6 +1,6 @@
 # Workshop Interface utilisateur
 
-![photoFigma](./siteInterface/sitemap.png)
+![photoFigma](./siteInterface/sitemap.jpg)
 
 ![photoFigmaTelephone](./siteInterface/PrototypeFigmaTelephone.png)
 ![photoFigma](./siteInterface/PrototypeFigma.png)
